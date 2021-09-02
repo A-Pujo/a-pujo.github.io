@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+
+:root{
+    --blue-dark: #4B6587;
+    --blue-light: #93B5C6;
+    --blue-lighter: #C9CCD5;
+    --light: #F7F6F2;
+    --gray: #C8C6C6;
+    --skin: #F0E5CF;
+    --pink: #FFE3E3;
+    --pink-blue: #E4D8DC;
+}
+
+.main-container{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+.top-section{
+    height: 100vh;
+    background-color: var(--light);
+}
+
+.flex-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.my-circle{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.my-pic{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-image: url('me.png');
+    background-size: cover;
+    transition: 0.3s;
+}
+
+.my-text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#circ-text{
+    text-transform: uppercase;
+    animation: spin 14s linear infinite;
+    letter-spacing: .2rem;
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}

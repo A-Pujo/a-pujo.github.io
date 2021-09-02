@@ -4,12 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awiwiew</title>
+    <title>Pujo's Coneduck</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="my.css">
 </head>
 <body>
-    <div>bum ni bos</div>
-    <p>mashok</p>
-    <b>bayik</b>
-    <div>anjayani</div>
+    <div class="main-container">
+        <div class="top-section">
+            
+            <div class="flex-section">
+                <div class="my-circle">                                      
+                    <div class="my-pic"></div>
+                    <div class="my-text">
+                        <h5 id="circ-text">&nbsp;Aln Pujo Priambodo - Tech and Economic enthusiast -</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            AOS.init();
+    
+            let circ = new CircleType(document.getElementById('circ-text'));
+
+            var windowWidth = $(document).width();
+
+            $('.my-circle').mousemove(function(event){
+                var moveX = ($(window).width()/2 - event.pageX);
+                var moveY = ($(window).height()/2 - event.pageY);
+                $('.my-pic').css('margin-left', moveX * 0.3 + 'px');
+                $('.my-pic').css('margin-top', moveY * 0.3 + 'px');
+            });
+
+            $('.my-circle').mouseleave(function(){
+                $('.my-pic').css('margin-left', 0 + 'px');
+                $('.my-pic').css('margin-top', 0 + 'px');
+            });
+        });
+    </script>
 </body>
 </html>
