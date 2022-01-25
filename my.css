@@ -179,6 +179,56 @@ a, a.nav-link, p{
     text-decoration: underline 2px solid var(--orange);
 }
 
+.progress{
+    background-color: var(--yellow); 
+    height: 12px; 
+    border-radius: 0 16px 16px 0;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+
+ul.timeline:before {
+    content: ' ';
+    background: var(--green);
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+ul.timeline > li:before {
+    content: ' ';
+    background: var(--skin);
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid var(--green);
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+.timeline a{
+    color: var(--orange);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.timeline p{
+    color: #4b4b4b;
+}
+
 .blog-posts .card{
     border-radius: 0 24px 0 24px;
     background-color: var(--yellow);
